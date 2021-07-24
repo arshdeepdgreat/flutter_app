@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -14,8 +15,22 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.red,
       ),
-      body: Center(
-        child: Image.asset('imgs/space-3.jpg'),
+      body: Column(
+        children: <Widget>[
+          Text("hello"),
+          ElevatedButton(
+              onPressed: (){},
+              style: ElevatedButton.styleFrom(
+                primary: Colors.red,
+              ),
+              child: Text("Click me"),
+          ),
+          Container(
+            color: Colors.amberAccent,
+            padding: EdgeInsets.all(20.0),
+            child: Text("hello container"),
+          )
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: null,
